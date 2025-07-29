@@ -7,7 +7,9 @@
     flex-wrap: wrap;
   }
   #contact,
-  #project {
+  #project,
+  #timeline,
+  #certificates {
     height: fit-content;
   }
 }
@@ -44,6 +46,28 @@
   }
   .about-containers {
     margin-top: 0;
+  }
+  .timeline-container {
+    max-width: 100%;
+    padding: 1rem 0;
+  }
+  .certificates-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+  .certificate-btn {
+    padding: 0.7rem 1.8rem;
+  }
+  /* Reduce hover effects on tablet for better performance */
+  .details-container:hover,
+  .timeline-content:hover,
+  .certificate-item:hover,
+  .color-container:hover {
+    transform: translateY(-3px);
+  }
+  .timeline-content:hover {
+    transform: translateX(5px);
   }
 }
 
@@ -99,5 +123,76 @@
   }
   .text-container {
     text-align: justify;
+  }
+  .timeline-item {
+    padding-left: 2rem;
+  }
+  .timeline-content {
+    padding: 1.5rem;
+  }
+  .timeline-content h3 {
+    font-size: 1.3rem;
+  }
+  .timeline-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  .certificates-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .certificate-item {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+  .certificate-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .certificate-icon {
+    margin: 0 auto 1rem;
+  }
+  .certificate-btn-container {
+    margin-top: 1rem;
+  }
+  .certificate-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.85rem;
+  }
+  /* Disable complex hover effects on mobile for better performance */
+  .details-container:hover,
+  .timeline-content:hover,
+  .certificate-item:hover,
+  .color-container:hover,
+  .contact-info-upper-container:hover {
+    transform: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .certificate-btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .arrow {
+    animation: none;
+  }
+  /* Keep simple hover effects for better UX */
+  .btn:hover,
+  .icon:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Optimize navigation effects for mobile */
+  .nav-links a::after {
+    display: none;
+  }
+  
+  .nav-links a:hover,
+  footer .nav-links a:hover {
+    transform: translateY(-1px);
+  }
+  
+  .contact-info-container:hover {
+    transform: translateY(-2px);
   }
 }
