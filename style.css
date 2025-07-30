@@ -590,11 +590,12 @@ article .icon {
 
 .certificates-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 2rem;
-  max-width: 1200px;
+  max-width: 400px;
   margin: 0 auto;
   padding: 2rem 0;
+  justify-items: center;
 }
 
 .certificate-item {
